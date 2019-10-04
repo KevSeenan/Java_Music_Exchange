@@ -2,8 +2,6 @@ package instruments;
 
 import behaviours.IPlay;
 
-import javax.sound.midi.Instrument;
-
 public class AcousticGuitar extends Guitars implements IPlay {
 
     public AcousticGuitar(String make, String model, int numberOfStrings, int numberOfPickUps) {
@@ -11,7 +9,7 @@ public class AcousticGuitar extends Guitars implements IPlay {
         super(make, model, numberOfStrings, numberOfPickUps);
     }
 
-    public String playInstrument(Instrument instrument) {
-        return instrument + "is being played";
+    public String playInstrument(String string) {
+        return "The acoustic guitar is playing " + string;
     }
 }

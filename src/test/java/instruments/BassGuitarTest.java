@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class BassGuitarTest {
 
@@ -35,5 +36,12 @@ public class BassGuitarTest {
     @Test
     public void hasPickUps() {
         assertEquals(2, bassGuitar.getNumberOfPickUps());
+    }
+
+    @Test
+    public void canBePlayed() {
+        assertNotNull(bassGuitar);
+        assertEquals("The bass guitar is playing Schism by Tool",
+                bassGuitar.playInstrument("Schism by Tool"));
     }
 }

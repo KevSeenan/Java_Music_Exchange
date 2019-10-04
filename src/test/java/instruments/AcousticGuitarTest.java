@@ -1,9 +1,11 @@
 package instruments;
 
+import behaviours.IPlay;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class AcousticGuitarTest {
 
@@ -35,6 +37,13 @@ public class AcousticGuitarTest {
     @Test
     public void hasPickUps() {
         assertEquals(0, acousticGuitar.getNumberOfPickUps());
+    }
+
+    @Test
+    public void canBePlayed() {
+        assertNotNull(acousticGuitar);
+        assertEquals("The acoustic guitar is playing Blowing In The Wind by Bob Dylan",
+                        acousticGuitar.playInstrument("Blowing In The Wind by Bob Dylan"));
     }
 
 }
