@@ -4,5 +4,5 @@ import javax.sound.midi.Instrument;
 
 public interface IPlay {
 
-    void playIntsrument(Instrument instrument);
+    String playInstrument(Instrument instrument);
 }
