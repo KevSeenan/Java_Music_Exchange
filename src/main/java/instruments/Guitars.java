@@ -23,31 +23,15 @@ public abstract class Guitars implements IPlay {
         return make;
     }
 
-    public void setMake(String make) {
-        this.make = make;
-    }
-
     public String getModel() {
         return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
     }
 
     public int getNumberOfStrings() {
         return numberOfStrings;
     }
 
-    public void setNumberOfStrings(int numberOfStrings) {
-        this.numberOfStrings = numberOfStrings;
-    }
-
     public int getNumberOfPickUps() {
         return numberOfPickUps;
-    }
-
-    public void setNumberOfPickUps(int numberOfPickUps) {
-        this.numberOfPickUps = numberOfPickUps;
     }
 }

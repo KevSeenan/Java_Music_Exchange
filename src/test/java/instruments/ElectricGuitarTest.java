@@ -11,7 +11,7 @@ public class ElectricGuitarTest {
     ElectricGuitar  electricGuitar;
 
     @Before
-    public void AcousticGuitar() {
+    public void ElectricGuitar() {
         electricGuitar = new ElectricGuitar ("Gibson",
                 "Les Paul Special",
                 6,
