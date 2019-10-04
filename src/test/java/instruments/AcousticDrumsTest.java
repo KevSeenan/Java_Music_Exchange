@@ -11,7 +11,7 @@ public class AcousticDrumsTest {
     AcousticDrums  acousticDrums;
 
     @Before
-    public void AcousticDrum() {
+    public void AcousticDrums() {
         acousticDrums = new AcousticDrums ("Percussion",
                                             "Black",
                                             500.00,
