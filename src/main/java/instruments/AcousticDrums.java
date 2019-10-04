@@ -4,9 +4,14 @@ import behaviours.IPlay;
 
 public class AcousticDrums extends Drums implements IPlay {
 
-    public AcousticDrums(String type, String colour, String make, String model) {
+    public AcousticDrums(String type,
+                         String colour,
+                         double buyingPrice,
+                         double sellingPrice,
+                         String make,
+                         String model) {
 
-        super(type, colour, make, model);
+        super(type, colour, buyingPrice, sellingPrice, make, model);
     }
 
     public String playInstrument(String string) {

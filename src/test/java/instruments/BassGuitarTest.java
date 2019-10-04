@@ -14,8 +14,10 @@ public class BassGuitarTest {
     public void BassGuitar() {
         bassGuitar = new BassGuitar ("String",
                 "Red",
+                150.00,
+                250.00,
                 "Ibenez",
-                "TMB30-MGR Talman Mint Green 2019",
+                "TMB30-MGR Talman",
                 4,
                 2);
     }
@@ -31,13 +33,28 @@ public class BassGuitarTest {
     }
 
     @Test
+    public void hasABuyingPrice() {
+        assertEquals(150.00, bassGuitar.getBuyingPrice(), 0.0);
+    }
+
+    @Test
+    public void hasASellingPrice() {
+        assertEquals(250.00, bassGuitar.getSellingPrice(), 0.0);
+    }
+
+    @Test
+    public void canCalculateMarkUpPrice() {
+        assertEquals(100.00, bassGuitar.calculateMarkup(), 0.0);
+    }
+
+    @Test
     public void hasAMake() {
         assertEquals("Ibenez", bassGuitar.getMake());
     }
 
     @Test
     public void hasAModel() {
-        assertEquals("TMB30-MGR Talman Mint Green 2019", bassGuitar.getModel());
+        assertEquals("TMB30-MGR Talman", bassGuitar.getModel());
     }
 
     @Test

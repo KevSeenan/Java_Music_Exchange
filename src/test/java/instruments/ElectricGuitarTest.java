@@ -14,6 +14,8 @@ public class ElectricGuitarTest {
     public void ElectricGuitar() {
         electricGuitar = new ElectricGuitar ("String",
                                             "Sunburst",
+                                            2000.00,
+                                            4000.00,
                                             "Gibson",
                                             "Les Paul Special",
                                             6,
@@ -28,6 +30,21 @@ public class ElectricGuitarTest {
     @Test
     public void hasAColour() {
         assertEquals("Sunburst", electricGuitar.getColour());
+    }
+
+    @Test
+    public void hasABuyingPrice() {
+        assertEquals(2000.00, electricGuitar.getBuyingPrice(), 0.0);
+    }
+
+    @Test
+    public void hasASellingPrice() {
+        assertEquals(4000.00, electricGuitar.getSellingPrice(), 0.0);
+    }
+
+    @Test
+    public void canCalculateMarkUpPrice() {
+        assertEquals(2000.00, electricGuitar.calculateMarkup(), 0.0);
     }
 
     @Test

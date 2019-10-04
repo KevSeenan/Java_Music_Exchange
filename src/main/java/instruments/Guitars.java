@@ -10,8 +10,8 @@ public abstract class Guitars extends Instrument implements IPlay {
     private int numberOfPickUps;
 
 
-    public Guitars(String type, String colour, String make, String model, int numberOfStrings, int numberOfPickUps) {
-        super(type, colour);
+    public Guitars(String type, String colour, double buyingPrice, double sellingPrice, String make, String model, int numberOfStrings, int numberOfPickUps) {
+        super(type, colour, buyingPrice, sellingPrice);
 
         this.make = make;
         this.model = model;

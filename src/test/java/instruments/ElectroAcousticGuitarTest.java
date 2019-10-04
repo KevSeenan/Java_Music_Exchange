@@ -14,6 +14,8 @@ public class ElectroAcousticGuitarTest {
     public void ElectroAcousticGuitar() {
         electroAcousticGuitar = new ElectroAcousticGuitar ("String",
                                                             "Black",
+                                                            500.00,
+                                                            750.00,
                                                             "Yamaha",
                                                             "APX700II",
                                                             6,
@@ -28,6 +30,21 @@ public class ElectroAcousticGuitarTest {
     @Test
     public void hasAColour() {
         assertEquals("Black", electroAcousticGuitar.getColour());
+    }
+
+    @Test
+    public void hasABuyingPrice() {
+        assertEquals(500.00, electroAcousticGuitar.getBuyingPrice(), 0.0);
+    }
+
+    @Test
+    public void hasASellingPrice() {
+        assertEquals(750.00, electroAcousticGuitar.getSellingPrice(), 0.0);
+    }
+
+    @Test
+    public void canCalculateMarkUpPrice() {
+        assertEquals(250.00, electroAcousticGuitar.calculateMarkup(), 0.0);
     }
 
     @Test

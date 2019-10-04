@@ -14,6 +14,8 @@ public class AcousticDrumsTest {
     public void AcousticDrum() {
         acousticDrums = new AcousticDrums ("Percussion",
                                             "Black",
+                                            500.00,
+                                            650.00,
                                             "Pearl",
                                             "XX Export 7pc Double Bass Drum Kit");
     }
@@ -26,6 +28,21 @@ public class AcousticDrumsTest {
     @Test
     public void hasAColour() {
         assertEquals("Black", acousticDrums.getColour());
+    }
+
+    @Test
+    public void hasABuyingPrice() {
+        assertEquals(500.00, acousticDrums.getBuyingPrice(), 0.0);
+    }
+
+    @Test
+    public void hasASellingPrice() {
+        assertEquals(650.00, acousticDrums.getSellingPrice(), 0.0);
+    }
+
+    @Test
+    public void canCalculateMarkUpPrice() {
+        assertEquals(150.00, acousticDrums.calculateMarkup(), 0.0);
     }
 
     @Test

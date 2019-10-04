@@ -8,8 +8,8 @@ public abstract class Drums extends Instrument implements IPlay {
     private String model;
 
 
-    public Drums(String type, String colour, String make, String model) {
-        super(type, colour);
+    public Drums(String type, String colour, double buyingPrice, double sellingPrice, String make, String model) {
+        super(type, colour, buyingPrice, sellingPrice);
 
         this.make = make;
         this.model = model;

@@ -8,8 +8,14 @@ public class Keyboard extends Instrument implements IPlay {
     private String model;
 
 
-    public Keyboard(String make, String model, String type, String colour) {
-        super(type, colour);
+    public Keyboard(String make,
+                    String model,
+                    String type,
+                    String colour,
+                    double buyingPrice,
+                    double sellingPrice) {
+
+        super(type, colour, buyingPrice, sellingPrice);
 
         this.make = make;
         this.model = model;

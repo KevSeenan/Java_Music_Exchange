@@ -12,7 +12,12 @@ public class KeyboardTest {
 
     @Before
     public void Keyboard() {
-        keyboard = new Keyboard ("Casio","CTK 1500", "Percussion", "White");
+        keyboard = new Keyboard ("Casio",
+                                "CTK 1500",
+                                "Percussion",
+                                "White",
+                                450.00,
+                                550.00);
     }
 
     @Test
@@ -23,6 +28,21 @@ public class KeyboardTest {
     @Test
     public void hasAColour() {
         assertEquals("White", keyboard.getColour());
+    }
+
+    @Test
+    public void hasABuyingPrice() {
+        assertEquals(450.00, keyboard.getBuyingPrice(), 0.0);
+    }
+
+    @Test
+    public void hasASellingPrice() {
+        assertEquals(550.00, keyboard.getSellingPrice(), 0.0);
+    }
+
+    @Test
+    public void canCalculateMarkUpPrice() {
+        assertEquals(100.00, keyboard.calculateMarkup(), 0.0);
     }
 
     @Test

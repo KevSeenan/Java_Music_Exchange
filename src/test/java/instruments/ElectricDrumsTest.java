@@ -14,6 +14,8 @@ public class ElectricDrumsTest {
     public void ElectricDrums() {
         electricDrums = new ElectricDrums ("Percussion",
                 "Black",
+                1000.00,
+                2500.00,
                 "Yamaha",
                 "DTX402");
     }
@@ -26,6 +28,21 @@ public class ElectricDrumsTest {
     @Test
     public void hasAColour() {
         assertEquals("Black", electricDrums.getColour());
+    }
+
+    @Test
+    public void hasABuyingPrice() {
+        assertEquals(1000.00, electricDrums.getBuyingPrice(), 0.0);
+    }
+
+    @Test
+    public void hasASellingPrice() {
+        assertEquals(2500.00, electricDrums.getSellingPrice(), 0.0);
+    }
+
+    @Test
+    public void canCalculateMarkUpPrice() {
+        assertEquals(1500.00, electricDrums.calculateMarkup(), 0.0);
     }
 
     @Test
