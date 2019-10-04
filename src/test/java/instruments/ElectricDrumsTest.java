@@ -12,7 +12,20 @@ public class ElectricDrumsTest {
 
     @Before
     public void ElectricDrums() {
-        electricDrums = new ElectricDrums ("Yamaha","DTX402");
+        electricDrums = new ElectricDrums ("Percussion",
+                "Black",
+                "Yamaha",
+                "DTX402");
+    }
+
+    @Test
+    public void hasAType() {
+        assertEquals("Percussion", electricDrums.getType());
+    }
+
+    @Test
+    public void hasAColour() {
+        assertEquals("Black", electricDrums.getColour());
     }
 
     @Test

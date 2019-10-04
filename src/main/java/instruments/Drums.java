@@ -2,13 +2,14 @@ package instruments;
 
 import behaviours.IPlay;
 
-public abstract class Drums implements IPlay {
+public abstract class Drums extends Instrument implements IPlay {
 
     private String make;
     private String model;
 
 
-    public Drums(String make, String model) {
+    public Drums(String type, String colour, String make, String model) {
+        super(type, colour);
 
         this.make = make;
         this.model = model;

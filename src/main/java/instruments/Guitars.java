@@ -2,7 +2,7 @@ package instruments;
 
 import behaviours.IPlay;
 
-public abstract class Guitars implements IPlay {
+public abstract class Guitars extends Instrument implements IPlay {
 
     private String make;
     private String model;
@@ -10,7 +10,8 @@ public abstract class Guitars implements IPlay {
     private int numberOfPickUps;
 
 
-    public Guitars(String make, String model, int numberOfStrings, int numberOfPickUps) {
+    public Guitars(String type, String colour, String make, String model, int numberOfStrings, int numberOfPickUps) {
+        super(type, colour);
 
         this.make = make;
         this.model = model;

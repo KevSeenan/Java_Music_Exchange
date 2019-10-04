@@ -2,13 +2,14 @@ package instruments;
 
 import behaviours.IPlay;
 
-public class Keyboard implements IPlay {
+public class Keyboard extends Instrument implements IPlay {
 
     private String make;
     private String model;
 
 
-    public Keyboard(String make, String model) {
+    public Keyboard(String make, String model, String type, String colour) {
+        super(type, colour);
 
         this.make = make;
         this.model = model;

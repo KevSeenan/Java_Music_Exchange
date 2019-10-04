@@ -12,10 +12,22 @@ public class ElectricGuitarTest {
 
     @Before
     public void ElectricGuitar() {
-        electricGuitar = new ElectricGuitar ("Gibson",
-                "Les Paul Special",
-                6,
-                2);
+        electricGuitar = new ElectricGuitar ("String",
+                                            "Sunburst",
+                                            "Gibson",
+                                            "Les Paul Special",
+                                            6,
+                                            2);
+    }
+
+    @Test
+    public void hasAType() {
+        assertEquals("String", electricGuitar.getType());
+    }
+
+    @Test
+    public void hasAColour() {
+        assertEquals("Sunburst", electricGuitar.getColour());
     }
 
     @Test

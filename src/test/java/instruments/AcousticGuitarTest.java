@@ -13,10 +13,22 @@ public class AcousticGuitarTest {
 
     @Before
     public void AcousticGuitar() {
-        acousticGuitar = new AcousticGuitar ("Fender",
+        acousticGuitar = new AcousticGuitar ("String",
+                                                "Blue",
+                                                "Fender",
                                                 "CC-60S",
                                                 6,
                                                 0);
+    }
+
+    @Test
+    public void hasAType() {
+        assertEquals("String", acousticGuitar.getType());
+    }
+
+    @Test
+    public void hasAColour() {
+        assertEquals("Blue", acousticGuitar.getColour());
     }
 
     @Test

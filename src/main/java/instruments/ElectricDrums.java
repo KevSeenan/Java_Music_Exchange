@@ -4,9 +4,9 @@ import behaviours.IPlay;
 
 public class ElectricDrums extends Drums implements IPlay {
 
-    public ElectricDrums(String make, String model) {
+    public ElectricDrums(String type, String colour, String make, String model) {
 
-        super(make, model);
+        super(type, colour, make, model);
     }
 
     public String playInstrument(String string) {

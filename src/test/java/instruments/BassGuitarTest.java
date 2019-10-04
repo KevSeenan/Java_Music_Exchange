@@ -12,10 +12,22 @@ public class BassGuitarTest {
 
     @Before
     public void BassGuitar() {
-        bassGuitar = new BassGuitar ("Ibenez",
+        bassGuitar = new BassGuitar ("String",
+                "Red",
+                "Ibenez",
                 "TMB30-MGR Talman Mint Green 2019",
                 4,
                 2);
+    }
+
+    @Test
+    public void hasAType() {
+        assertEquals("String", bassGuitar.getType());
+    }
+
+    @Test
+    public void hasAColour() {
+        assertEquals("Red", bassGuitar.getColour());
     }
 
     @Test

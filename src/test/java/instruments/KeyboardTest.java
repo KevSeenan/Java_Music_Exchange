@@ -11,8 +11,18 @@ public class KeyboardTest {
     Keyboard  keyboard;
 
     @Before
-    public void AcousticDrum() {
-        keyboard = new Keyboard ("Casio","CTK 1500");
+    public void Keyboard() {
+        keyboard = new Keyboard ("Casio","CTK 1500", "Percussion", "White");
+    }
+
+    @Test
+    public void hasAType() {
+        assertEquals("Percussion", keyboard.getType());
+    }
+
+    @Test
+    public void hasAColour() {
+        assertEquals("White", keyboard.getColour());
     }
 
     @Test

@@ -12,7 +12,20 @@ public class AcousticDrumsTest {
 
     @Before
     public void AcousticDrum() {
-        acousticDrums = new AcousticDrums ("Pearl","XX Export 7pc Double Bass Drum Kit");
+        acousticDrums = new AcousticDrums ("Percussion",
+                                            "Black",
+                                            "Pearl",
+                                            "XX Export 7pc Double Bass Drum Kit");
+    }
+
+    @Test
+    public void hasAType() {
+        assertEquals("Percussion", acousticDrums.getType());
+    }
+
+    @Test
+    public void hasAColour() {
+        assertEquals("Black", acousticDrums.getColour());
     }
 
     @Test

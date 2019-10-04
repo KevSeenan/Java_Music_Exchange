@@ -12,10 +12,22 @@ public class ElectroAcousticGuitarTest {
 
     @Before
     public void ElectroAcousticGuitar() {
-        electroAcousticGuitar = new ElectroAcousticGuitar ("Yamaha",
-                "APX700II",
-                6,
-                1);
+        electroAcousticGuitar = new ElectroAcousticGuitar ("String",
+                                                            "Black",
+                                                            "Yamaha",
+                                                            "APX700II",
+                                                            6,
+                                                            1);
+    }
+
+    @Test
+    public void hasAType() {
+        assertEquals("String", electroAcousticGuitar.getType());
+    }
+
+    @Test
+    public void hasAColour() {
+        assertEquals("Black", electroAcousticGuitar.getColour());
     }
 
     @Test
