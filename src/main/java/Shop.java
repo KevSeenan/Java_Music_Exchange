@@ -8,14 +8,24 @@ public class Shop {
     private int capacity;
     private ArrayList<ISell> stock;
 
-    public Shop (String name, int capacity) {
+    public Shop(String name, int capacity) {
         this.name = name;
         this.capacity = capacity;
         this.stock = new ArrayList<ISell>();
     }
 
+    public String getName() {
+        return name;
+    }
 
     public int stockCount() {
         return this.stock.size();
     }
+
+
+    public void addItem(ISell item) {
+        this.stock.add(item);
+    }
+
 }
+
