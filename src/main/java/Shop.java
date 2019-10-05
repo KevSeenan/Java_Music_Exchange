@@ -1,4 +1,5 @@
 import behaviours.ISell;
+import items.GuitarStrings;
 
 
 import java.util.ArrayList;
@@ -25,7 +26,9 @@ public class Shop {
 
 
     public void addItem(ISell item) {
-        this.stock.add(item);
+        if (stockCount() < capacity) {
+            this.stock.add(item);
+        }
     }
 
     public void removeItem(ISell item) {
@@ -42,4 +45,3 @@ public class Shop {
         return totalPotentialProfit;
     }
 }
-

@@ -22,7 +22,7 @@ public class ShopTest {
 
     @Before
     public void ShopTest() {
-        shop = new Shop ("Ray's Music Exchange", 3);
+        shop = new Shop ("Ray's Music Exchange", 400);
         drumSticks = new DrumSticks ("Pearl",
                 "PDS-5A",
                 4.00,
