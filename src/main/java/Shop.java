@@ -1,5 +1,5 @@
 import behaviours.ISell;
-import items.GuitarStrings;
+
 
 import java.util.ArrayList;
 
@@ -30,6 +30,16 @@ public class Shop {
 
     public void removeItem(ISell item) {
         this.stock.remove(item);
+    }
+
+    public double calculateTotalPotentialProfit() {
+        double totalPotentialProfit = 0;
+
+        for (ISell item: this.stock) {
+            totalPotentialProfit += item.calculateMarkup();
+        }
+
+        return totalPotentialProfit;
     }
 }
 
