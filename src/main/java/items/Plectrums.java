@@ -1,6 +1,8 @@
 package items;
 
-public class Plectrums {
+import behaviours.ISell;
+
+public class Plectrums implements ISell {
 
     private String make;
     private String model;

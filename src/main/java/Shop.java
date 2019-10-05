@@ -1,4 +1,5 @@
 import behaviours.ISell;
+import items.GuitarStrings;
 
 import java.util.ArrayList;
 
@@ -27,5 +28,8 @@ public class Shop {
         this.stock.add(item);
     }
 
+    public void removeItem(ISell item) {
+        this.stock.remove(item);
+    }
 }
 

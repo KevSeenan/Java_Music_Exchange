@@ -1,6 +1,8 @@
 package items;
 
-public class GuitarStrings {
+import behaviours.ISell;
+
+public class GuitarStrings implements ISell {
 
     private String make;
     private String model;
